@@ -1,0 +1,25 @@
+<p>login-page</p>
+
+<h2>Login Form Values:</h2>
+
+<!-- pipe 'json' para pasar los valores del formulario a JSON -->
+<p>{{ loginForm.value | json }}</p>
+
+<form [formGroup]="loginForm" (submit)="login()">
+
+  <mat-form-field>
+    <input matInput formControlName="username" placeholder="Email"/>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="password" placeholder="Password"/>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">
+    Login
+  </button>
+
+  <button mat-raised-button color="warning" [routerLink]="['/register']"> Create an account </button>
+
+</form>
+
