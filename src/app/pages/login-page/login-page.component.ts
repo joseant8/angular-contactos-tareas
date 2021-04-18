@@ -20,7 +20,7 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      username: '',
+      email: '',
       password: ''
     });
   }
@@ -28,29 +28,30 @@ export class LoginPageComponent implements OnInit {
 
   login(): void {
 
-    if(this.loginForm.valid && this.loginForm.value.username && this.loginForm.value.password){
-      let user: User = new User(this.loginForm.value.username, this.loginForm.value.password)
+    if(this.loginForm.valid && this.loginForm.value.email && this.loginForm.value.password){
+      let user: User = new User(this.loginForm.value.email, this.loginForm.value.password)
 
       this.authSubscription = this.authService.login(user).subscribe((response) => {
         if(response.token){
           console.log(`Token: ${response.token}`);
-          // Set Token in Session Storage of our Navigator
+
+          // Guardamos el token en SessionStorage de nuestro navegador en la variable 'Token'
           sessionStorage.setItem('Token', response.token);
-          // We set loggedIn in our Service in order to be able to navigate to Home
+
           this.authService.setLoggedIn(true);
-          // Navigation to "/Home"
-          // In this moment, the AuthGuard will be executed, as we are trying to acces to
-          // HomePage that has the canActivate assigned to it
+
+          // Navegamos a "/home"
+          // El AuthGuard será ejecutado
           this.router.navigate(['/home']);
         }else{
-          alert('Error: No Token Received');
+          alert('Error: No se ha recibido el token');
           this.authService.setLoggedIn(false);
           sessionStorage.removeItem('Token');
         }
       });
     } else {
       this.authService.setLoggedIn(false);
-      alert('You must provide a username and a valid password')
+      alert('EL email y/o contraseña no son válidos')
     }
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Contact } from 'src/app/models/contact/contact.model';
 
 @Component({
@@ -8,9 +8,10 @@ import { Contact } from 'src/app/models/contact/contact.model';
 })
 export class ContactsPageComponent implements OnInit {
 
-  id: number = 1
+  //id: number = 1
 
-  contact: Contact = new Contact(1,'Jose', 'email', 'm', 't')
+  //@Input() contact: Contact = new Contact(this.id,'', '', '', '')
+  //contact: Contact = new Contact(this.id,'jose@email', 'Jose', 'm', 't')
 
   constructor() { }
 

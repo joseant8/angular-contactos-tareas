@@ -10,8 +10,8 @@ import { Contact } from 'src/app/models/contact/contact.model';
 })
 export class ContactDetailPageComponent implements OnInit {
 
-  idContact: string = '';
-  contact: any = new Contact(1,'Jose', 'email', 'm', 't');
+  idContact: number = 0;
+  contact: any = new Contact(0,'', '', '', '');
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private location: Location) { }
 

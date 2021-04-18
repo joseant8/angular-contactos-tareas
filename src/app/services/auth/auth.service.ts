@@ -21,7 +21,7 @@ export class AuthService {
 
   login(user: User): Observable<any>{
     let body = {
-      email: user.username,
+      email: user.email,
       password: user.password
       // ...user
     }
