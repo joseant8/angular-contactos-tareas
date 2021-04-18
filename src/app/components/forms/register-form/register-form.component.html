@@ -1,0 +1,24 @@
+
+<mat-card>
+  <form [formGroup]="registerForm" (submit)="submitRegisterForm()">
+
+    <mat-form-field>
+      <input matInput placeholder="Email" formControlName="email" />
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <input matInput placeholder="Password" formControlName="password" />
+    </mat-form-field>
+
+    <br>
+    <button [disabled]="registerForm.invalid" mat-raised-button color="primary" type="submit">
+      Registrar nueva cuenta
+    </button>
+
+  </form>
+
+  <button mat-raised-button color="warning" [routerLink]="['/login']">
+    Volver a Login
+  </button>
+</mat-card>

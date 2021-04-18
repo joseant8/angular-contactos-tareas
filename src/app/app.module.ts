@@ -25,6 +25,7 @@ import { TodosPageComponent } from './pages/todos-page/todos-page.component';
 import { ContactDetailPageComponent } from './pages/contact-detail-page/contact-detail-page.component';
 import { TodoDetailPageComponent } from './pages/todo-detail-page/todo-detail-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterFormComponent } from './components/forms/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactsPageComponent,
     TodosPageComponent,
     ContactDetailPageComponent,
-    TodoDetailPageComponent
+    TodoDetailPageComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,

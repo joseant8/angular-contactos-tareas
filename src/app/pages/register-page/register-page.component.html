@@ -1,23 +1,5 @@
-<p>Página de registro</p>
+<h1>Página de registro</h1>
 
-<mat-card>
-  <form [formGroup]="registerForm" (submit)="submitRegisterForm()">
+<app-register-form>
 
-    <mat-form-field>
-      <input matInput placeholder="Email" formControlName="email" />
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput placeholder="Password" formControlName="password" />
-    </mat-form-field>
-
-    <button [disabled]="registerForm.invalid" mat-raised-button color="primary" type="submit">
-      Registrar nueva cuenta
-    </button>
-
-  </form>
-
-  <button mat-raised-button color="warning" [routerLink]="['/login']">
-    Volver a Login
-  </button>
-</mat-card>
+</app-register-form>
