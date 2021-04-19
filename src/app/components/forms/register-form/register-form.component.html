@@ -11,14 +11,16 @@
       <input matInput placeholder="Password" formControlName="password" />
     </mat-form-field>
 
-    <br>
-    <button [disabled]="registerForm.invalid" mat-raised-button color="primary" type="submit">
-      Registrar nueva cuenta
-    </button>
+    <mat-card-actions>
+      <button [disabled]="registerForm.invalid" mat-raised-button color="primary" type="submit">
+        Registrar cuenta
+      </button>
 
+      <button mat-raised-button color="warning" [routerLink]="['/login']">
+        Volver a Login
+      </button>
+    </mat-card-actions>
   </form>
 
-  <button mat-raised-button color="warning" [routerLink]="['/login']">
-    Volver a Login
-  </button>
+
 </mat-card>

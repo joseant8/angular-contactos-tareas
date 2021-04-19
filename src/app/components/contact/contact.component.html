@@ -1,5 +1,18 @@
-<p>contact works!---------</p>
 
-<h1>
-  Contact id: {{contact.id}}: {{contact.email}}, {{contact.first_name}}
-</h1>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{contact.first_name}} {{contact.last_name}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src={{contact.avatar}} alt="Contacto">
+  <mat-card-content>
+    <ul>
+      <li>Email: {{contact.email}}</li>
+      <li>Nombre: {{contact.first_name}}</li>
+      <li>Apellido: {{contact.last_name}}</li>
+     </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button >Actualizar</button>
+    <button mat-button [routerLink]="['/contacts']">Volver</button>
+  </mat-card-actions>
+</mat-card>

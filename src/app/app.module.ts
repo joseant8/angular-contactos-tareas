@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { ContactDetailPageComponent } from './pages/contact-detail-page/contact-
 import { TodoDetailPageComponent } from './pages/todo-detail-page/todo-detail-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterFormComponent } from './components/forms/register-form/register-form.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { RegisterFormComponent } from './components/forms/register-form/register
     TodosPageComponent,
     ContactDetailPageComponent,
     TodoDetailPageComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { RegisterFormComponent } from './components/forms/register-form/register
     MatIconModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
