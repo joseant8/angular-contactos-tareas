@@ -1,3 +1,17 @@
 .example-card {
-  max-width: 400px;
+  width: 30%;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.mat-card {
+  background-color: #f5f5f5;
+}
+
+
+.example-card .datos{
+  text-align: left;
+  align-items: left;
+  margin: auto;
 }

@@ -1,0 +1,25 @@
+
+<mat-card>
+  <form [formGroup]="updateForm" (submit)="update()">
+
+    <mat-form-field>
+      <input matInput formControlName="email" placeholder="Email"/>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="Nombre"/>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="last_name" placeholder="Apellido"/>
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">
+        Editar
+      </button>
+      <button mat-raised-button color="warning" routerLink='/contacts/{{contact.id}}' [state]="contact"> Volver </button>
+    </mat-card-actions>
+
+  </form>
+</mat-card>

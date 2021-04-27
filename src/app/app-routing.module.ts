@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
 import { ContactDetailPageComponent } from './pages/contact-detail-page/contact-detail-page.component';
+import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit-page.component';
 import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { TodoCreatePageComponent } from './pages/todo-create-page/todo-create-page.component';
 import { TodoDetailPageComponent } from './pages/todo-detail-page/todo-detail-page.component';
 import { TodosPageComponent } from './pages/todos-page/todos-page.component';
 
@@ -41,8 +43,18 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'contacts/edit/:id', // http:localhost:4200/contacts/update/1
+    component: ContactEditPageComponent,
+    canActivate: [AuthGuard],
+  },
+  {
     path: 'todos', // http:localhost:4200/todos
     component: TodosPageComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'todos/create', // http:localhost:4200/todos/create
+    component: TodoCreatePageComponent,
     canActivate: [AuthGuard],
   },
   {

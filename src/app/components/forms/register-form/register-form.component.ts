@@ -32,13 +32,13 @@ export class RegisterFormComponent implements OnInit {
 
       this.registerSubscription = this.registerService.register(user).subscribe((response) => {
         if(response.token){
-          sessionStorage.setItem('Token', response.token);
+          localStorage.setItem('Token', response.token);
           this.authService.setLoggedIn(true);
           this.router.navigate(['/home']);
         }else{
           alert('Error: No se ha recibido el token');
           this.authService.setLoggedIn(false);
-          sessionStorage.removeItem('Token');
+          localStorage.removeItem('Token');
         }
       });
     }

@@ -9,6 +9,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTableModule} from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +29,10 @@ import { TodoDetailPageComponent } from './pages/todo-detail-page/todo-detail-pa
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterFormComponent } from './components/forms/register-form/register-form.component';
 import { NavComponent } from './components/nav/nav.component';
+import { EditContactFormComponent } from './components/forms/edit-contact-form/edit-contact-form.component';
+import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit-page.component';
+import { TodoFormComponent } from './components/forms/todo-form/todo-form.component';
+import { TodoCreatePageComponent } from './pages/todo-create-page/todo-create-page.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,11 @@ import { NavComponent } from './components/nav/nav.component';
     ContactDetailPageComponent,
     TodoDetailPageComponent,
     RegisterFormComponent,
-    NavComponent
+    NavComponent,
+    EditContactFormComponent,
+    ContactEditPageComponent,
+    TodoFormComponent,
+    TodoCreatePageComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +68,8 @@ import { NavComponent } from './components/nav/nav.component';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

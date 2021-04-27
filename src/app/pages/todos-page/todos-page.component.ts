@@ -1,4 +1,6 @@
+import { Location } from '@angular/common'
 import { Component, OnInit } from '@angular/core';
+import { Todo } from 'src/app/models/todo/todo.model';
 
 @Component({
   selector: 'app-todos-page',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosPageComponent implements OnInit {
 
-  constructor() { }
+  todoCreatedAtForm: any = new Todo('', '', 0, '', new Date)
+
+  constructor(private location: Location) { }
 
   ngOnInit(): void {
+    if(this.location.getState()){
+      this.todoCreatedAtForm = this.location.getState();
+    }
   }
 
 }

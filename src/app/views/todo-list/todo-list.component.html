@@ -1,1 +1,9 @@
-<p>todo-list works!</p>
+<div>
+  <h4>
+    Lista de tareas
+  </h4>
+  <div *ngFor="let t of todoList">
+    Contacto id: {{t.id}}, {{t.title}}
+    <a routerLink='/todos/{{t.id}}' routerLinkActive="router-link-active" [state]="t"> Ver detalle </a>
+  </div>
+</div>

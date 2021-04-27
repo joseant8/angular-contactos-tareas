@@ -4,7 +4,7 @@
     <mat-card-title>{{contact.first_name}} {{contact.last_name}}</mat-card-title>
   </mat-card-header>
   <img mat-card-image src={{contact.avatar}} alt="Contacto">
-  <mat-card-content>
+  <mat-card-content class="datos">
     <ul>
       <li>Email: {{contact.email}}</li>
       <li>Nombre: {{contact.first_name}}</li>
@@ -12,7 +12,7 @@
      </ul>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button >Actualizar</button>
+    <button mat-button routerLink='/contacts/edit/{{contact.id}}' [state]="contact">Editar</button>
     <button mat-button [routerLink]="['/contacts']">Volver</button>
   </mat-card-actions>
 </mat-card>

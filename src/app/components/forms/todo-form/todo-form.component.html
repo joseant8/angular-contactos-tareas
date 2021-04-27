@@ -1,0 +1,33 @@
+
+<mat-card>
+  <form [formGroup]="todoForm" (submit)="submitTodoForm()">
+
+    <mat-form-field>
+      <input matInput formControlName="title" placeholder="Título"/>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="description" placeholder="Descripción"/>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="urgency" placeholder="Urgencia"/>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="responsable" placeholder="Responsable"/>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="end_date" placeholder="Fecha fin"/>
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">
+        Crear
+      </button>
+      <button mat-raised-button color="warning" routerLink='/todos'> Volver </button>
+    </mat-card-actions>
+
+  </form>
+</mat-card>

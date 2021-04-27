@@ -26,7 +26,7 @@ export class ContactDetailPageComponent implements OnInit {
       }
     })
 
-    // obtenemos el contacto que se pasa por la ruta desde 'contact-page'
+    // obtenemos el contacto que se pasa por la ruta desde 'contact-list'
     if(this.location.getState()){
       this.contact = this.location.getState();
     }

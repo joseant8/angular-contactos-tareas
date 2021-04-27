@@ -35,8 +35,8 @@ export class LoginFormComponent implements OnInit {
         if(response.token){
           console.log(`Token: ${response.token}`);
 
-          // Guardamos el token en SessionStorage de nuestro navegador en la variable 'Token'
-          sessionStorage.setItem('Token', response.token);
+          // Guardamos el token en localStorage de nuestro navegador en la variable 'Token'
+          localStorage.setItem('Token', response.token);
 
           this.authService.setLoggedIn(true);
 
@@ -46,7 +46,7 @@ export class LoginFormComponent implements OnInit {
         }else{
           alert('Error: No se ha recibido el token');
           this.authService.setLoggedIn(false);
-          sessionStorage.removeItem('Token');
+          localStorage.removeItem('Token');
         }
       });
     } else {

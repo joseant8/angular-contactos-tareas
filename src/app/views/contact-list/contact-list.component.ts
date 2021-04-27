@@ -10,6 +10,7 @@ import { ContactService } from 'src/app/services/contact/contact.service';
 export class ContactListComponent implements OnInit {
 
   contactList: Contact[] = [];
+  displayedColumns: string[] = ['nombre_completo', 'email', 'detalle'];
 
   // inyectamos el contact service
   constructor(private contactService: ContactService) { }
@@ -19,5 +20,11 @@ export class ContactListComponent implements OnInit {
       this.contactList = response.data;
     });
   }
+
+  /*
+  updateList(contact: Contact): Contact[]{
+    this.contactList[contact.id] = contact
+    return this.contactList
+  }*/
 
 }
