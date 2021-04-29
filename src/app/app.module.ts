@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTableModule} from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +34,9 @@ import { EditContactFormComponent } from './components/forms/edit-contact-form/e
 import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit-page.component';
 import { TodoFormComponent } from './components/forms/todo-form/todo-form.component';
 import { TodoCreatePageComponent } from './pages/todo-create-page/todo-create-page.component';
+import { TodoEditPageComponent } from './pages/todo-edit-page/todo-edit-page.component';
+import { EditTodoFormComponent } from './components/forms/edit-todo-form/edit-todo-form.component';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +59,9 @@ import { TodoCreatePageComponent } from './pages/todo-create-page/todo-create-pa
     EditContactFormComponent,
     ContactEditPageComponent,
     TodoFormComponent,
-    TodoCreatePageComponent
+    TodoCreatePageComponent,
+    TodoEditPageComponent,
+    EditTodoFormComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +75,8 @@ import { TodoCreatePageComponent } from './pages/todo-create-page/todo-create-pa
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    MatTableModule
+    MatTableModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

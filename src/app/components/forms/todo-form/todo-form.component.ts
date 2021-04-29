@@ -28,7 +28,7 @@ export class TodoFormComponent implements OnInit {
   submitTodoForm(): void{
     if(true){
         let todo: Todo = new Todo(this.todoForm.value.title, this.todoForm.value.description, this.todoForm.value.urgency, this.todoForm.value.responsable, this.todoForm.value.end_date);
-
+        this.todoService.addTodo(todo)
         this.router.navigate(['/todos'], { state: todo });
     }
 

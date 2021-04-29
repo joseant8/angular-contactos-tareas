@@ -1,6 +1,6 @@
 
 <mat-card>
-  <form [formGroup]="todoForm" (submit)="submitTodoForm()">
+  <form [formGroup]="updateForm" (submit)="update()">
 
     <mat-form-field>
       <input matInput formControlName="title" placeholder="Título"/>
@@ -11,7 +11,7 @@
     </mat-form-field>
     <br>
     <mat-form-field>
-      <input matInput formControlName="urgency" placeholder="Urgencia" type="number" min=1 max=5/>
+      <input matInput formControlName="urgency" placeholder="Urgencia" type=number min=1 max=5/>
     </mat-form-field>
     <br>
     <mat-form-field>
@@ -19,14 +19,14 @@
     </mat-form-field>
     <br>
     <mat-form-field>
-      <input matInput formControlName="end_date" placeholder="Fecha fin" type="date"/>
+      <input matInput formControlName="end_date" placeholder="Fecha fin" type=date/>
     </mat-form-field>
 
     <mat-card-actions>
       <button mat-raised-button color="primary" type="submit">
-        Crear
+        Editar
       </button>
-      <button mat-raised-button color="warning" routerLink='/todos'> Volver </button>
+      <button mat-raised-button color="warning" routerLink='/todos/{{todo.id}}' [state]="todo"> Volver </button>
     </mat-card-actions>
 
   </form>

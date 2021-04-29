@@ -21,17 +21,17 @@ export class RegisterFormComponent implements OnInit {
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       email: ['', Validators.compose([Validators.required, Validators.email])],
-      password: ['', Validators.compose([Validators.required, Validators.minLength(2)])]
+      password: ['', Validators.required]
     });
   }
 
-  submitRegisterForm(): void {
+  register(): void {
     // console.table(this.registerForm.value);
     if(this.registerForm.valid && this.registerForm.value.email && this.registerForm.value.password){
       let user: User = new User(this.registerForm.value.email, this.registerForm.value.password)
 
       this.registerSubscription = this.registerService.register(user).subscribe((response) => {
-        if(response.token){
+        if(response.id && response.token){
           localStorage.setItem('Token', response.token);
           this.authService.setLoggedIn(true);
           this.router.navigate(['/home']);

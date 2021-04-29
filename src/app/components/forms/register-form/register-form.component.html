@@ -1,26 +1,22 @@
 
 <mat-card>
-  <form [formGroup]="registerForm" (submit)="submitRegisterForm()">
+  <form [formGroup]="registerForm" (submit)="register()">
 
     <mat-form-field>
-      <input matInput placeholder="Email" formControlName="email" />
+      <input matInput formControlName="email" placeholder="Email"/>
     </mat-form-field>
     <br>
-
     <mat-form-field>
-      <input matInput placeholder="Password" formControlName="password" />
+      <input matInput formControlName="password" placeholder="Password"/>
     </mat-form-field>
 
     <mat-card-actions>
-      <button [disabled]="registerForm.invalid" mat-raised-button color="primary" type="submit">
-        Registrar cuenta
+      <button mat-raised-button color="primary" type="submit">
+        Registrarse
       </button>
 
-      <button mat-raised-button color="warning" [routerLink]="['/login']">
-        Volver a Login
-      </button>
+      <button mat-raised-button color="warning" [routerLink]="['/login']"> Volver a login </button>
     </mat-card-actions>
+
   </form>
-
-
 </mat-card>
